@@ -1,0 +1,153 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.keypad-section {
+  margin-bottom: 20px;
+}
+
+.keypad-section input {
+  width: 60px;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.keypad-section button {
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.ssd-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ssd-char {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  margin: 0 2px;
+}
+
+.segment {
+  position: absolute;
+  background-color: #222;
+  border-radius: 4px;
+  opacity: 0.1;
+  transition: opacity 0.2s ease;
+}
+
+.on {
+  background-color: red;
+  opacity: 1;
+}
+
+.segment.a { top: 0; left: 5px; width: 20px; height: 5px; }
+.segment.b { top: 5px; right: 0; width: 5px; height: 20px; }
+.segment.c { bottom: 5px; right: 0; width: 5px; height: 20px; }
+.segment.d { bottom: 0; left: 5px; width: 20px; height: 5px; }
+.segment.e { bottom: 5px; left: 0; width: 5px; height: 20px; }
+.segment.f { top: 5px; left: 0; width: 5px; height: 20px; }
+.segment.g { top: 22px; left: 5px; width: 20px; height: 5px; }
+
+.car-count {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.parking-lot {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  height: 150px;
+}
+
+.slot {
+  width: 80px;
+  height: 120px;
+  border: 3px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.car {
+  width: 60px;
+  height: 100px;
+  background: linear-gradient(to bottom, #2196F3, #1976D2);
+  border-radius: 6px;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls button {
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #0277bd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #01579b;
+}
+
+.gate-area {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.gate {
+  width: 120px;
+  height: 20px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: transform 0.6s ease;
+}
+
+.gate.open {
+  transform: translateY(-60px);
+  background-color: green;
+}
